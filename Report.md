@@ -93,9 +93,10 @@ print('The state for the first agent looks like:', states[0])
       -1.68164849e-01]
 
 
-### 3. The RL agent 
+### 3. The learning algorithm
 
 The agent can be found in the file ddpg_agent.py, which implements a standard DDPG with some adjustments that can be seen in the hyperparameters setup.
+The model of both the critic and the actor is composed by 3 fully connected layers. There is the option to include batch normalization and dropout as hyperparameters.
 
 
 ```python
@@ -140,7 +141,7 @@ def run_agent(noise=True, n_episodes=1000, max_t=1000, print_every=10):
     return mean_score
 ```
 
-### 4. Set up agent hyperparameters
+### 4. Chosen hyperparameters
 
 
 ```python
@@ -161,7 +162,7 @@ config.EPS_MIN = 0.0001        # minimum value for the noise factor
 config.BN_ACTIVE =True         # enable batch normalization in actor and critic
 ```
 
-### 5. Train the agent and visualize reward
+### 5. Train the agent and plot rewards
 
 
 ```python
