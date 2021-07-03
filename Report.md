@@ -13,10 +13,6 @@ Run the next code cell to install a few packages.  This line will take a few min
 !pip -q install ./python
 ```
 
-    [31mtensorflow 1.7.1 has requirement numpy>=1.13.3, but you'll have numpy 1.12.1 which is incompatible.[0m
-    [31mipython 6.5.0 has requirement prompt-toolkit<2.0.0,>=1.0.15, but you'll have prompt-toolkit 3.0.19 which is incompatible.[0m
-
-
 The environments corresponding to both versions of the environment are already saved in the Workspace and can be accessed at the file paths provided below.  
 
 Please select one of the two options below for loading the environment.
