@@ -13,6 +13,10 @@ Run the next code cell to install a few packages.  This line will take a few min
 !pip -q install ./python
 ```
 
+    [31mtensorflow 1.7.1 has requirement numpy>=1.13.3, but you'll have numpy 1.12.1 which is incompatible.[0m
+    [31mipython 6.5.0 has requirement prompt-toolkit<2.0.0,>=1.0.15, but you'll have prompt-toolkit 3.0.19 which is incompatible.[0m
+
+
 The environments corresponding to both versions of the environment are already saved in the Workspace and can be accessed at the file paths provided below.  
 
 Please select one of the two options below for loading the environment.
@@ -93,10 +97,9 @@ print('The state for the first agent looks like:', states[0])
       -1.68164849e-01]
 
 
-### 3. The learning algorithm
+### 3. The RL agent 
 
 The agent can be found in the file ddpg_agent.py, which implements a standard DDPG with some adjustments that can be seen in the hyperparameters setup.
-The model of both the critic and the actor is composed by 3 fully connected layers. There is the option to include batch normalization and dropout as hyperparameters.
 
 
 ```python
@@ -141,7 +144,7 @@ def run_agent(noise=True, n_episodes=1000, max_t=1000, print_every=10):
     return mean_score
 ```
 
-### 4. Chosen hyperparameters
+### 4. Set up agent hyperparameters
 
 
 ```python
@@ -162,7 +165,7 @@ config.EPS_MIN = 0.0001        # minimum value for the noise factor
 config.BN_ACTIVE =True         # enable batch normalization in actor and critic
 ```
 
-### 5. Train the agent and plot rewards
+### 5. Train the agent and visualize reward
 
 
 ```python
@@ -191,7 +194,7 @@ with active_session():
     Episode 80	Average Score: 12.82
     Episode 90	Average Score: 17.38
     Episode 100	Average Score: 26.17
-    Problem solved in 106 episodes! Average Score: 30.74
+    Problem solved in 106 episodes!	Average Score: 30.74
 
 
 
@@ -205,7 +208,6 @@ with active_session():
 env.close()
 ```
 
-
-```python
-
-```
+### 6. Future Work
+As a future work it could be interesting to try the environment version 2 and implement algorithms that could take advantage of the 20 agents such as PPO, A3C or D4PG.
+Another promising approach could be to implement Q-prop.
