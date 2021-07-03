@@ -24,5 +24,5 @@ You will also need to uncompress the Unity environment. Extract the content into
 
 ## Instructions
 
-In order to start you have to open the file `Report.ipynb` in a Jupyter Notebook.
+In order to start you have to open the file `Continuous_Control.ipynb` in a Jupyter Notebook.
 
