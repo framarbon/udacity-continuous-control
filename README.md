@@ -29,6 +29,9 @@ This yields an average score for each episode (where the average is over all 20 
 The environment is considered solved, when the average (over 100 episodes) of those average scores is at least +30.
 
 ## Getting Started
+In order to install all the needed dependencies run the following command in your virtual environment:
+`pip -q install ./python`
+
 Download the environment from one of the links below. You need only select the environment that matches your operating system:
 
 #### Version 1: One (1) Agent
